@@ -1,0 +1,190 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body section {
+    transition: opacity 500ms;
+    opacity: 0.65;
+}
+
+body section:hover {
+    opacity: 1;
+}
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+    background-color: darkred;
+    cursor: default;
+    margin: 0;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    border: 2px solid darkgreen;
+    border-radius: 3px;
+    padding: 3px;
+    transition: padding 500ms;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+    padding: 3px 10px;
+}
+
+.inblock {
+    margin-top: 20px;
+    background-color: rgb(0, 50, 0);
+    color: white;
+}
+
+.outblock {
+    margin: 20px 0px;
+    background-color: rgb(0, 0, 70);
+    color: white;
+}
+
+.output {
+    font-size: 20px;
+    background-color: darkblue;
+    font-family: monospace;
+}
+
+.disabled {
+    background-color: rgb(50, 50, 50);
+}
+
+label.input_c_1 {
+    cursor: pointer;
+}
+
+.input a {
+    color: rgb(0, 217, 255);
+}
+
+.input a:hover {
+    color: rgb(0, 186, 219);
+}
+
+.mouseEvents .output {
+    width: 100%;
+}
+
+.mouseEvents_workspace {
+    height: 500px;
+    cursor: default;
+}
+
+.mousePosition {
+    float: right;
+    background-color: black;
+}
+
+.draggable {
+    position: absolute;
+    opacity: 0.5;
+    transition: opacity 500ms;
+    z-index: 10;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.content {
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+}
+
+
+
+.upscroll {
+    font-family: system-ui;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: darkgreen;
+    color: green;
+    transition: all 500ms;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.upscroll:hover {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: green;
+    color: lime;
+}
+
+.upscroll_visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_background {
+    background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.modal_content {
+    background-color: rgb(50, 50, 50);
+    border: 1px solid white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20% auto 0 auto;
+    color: white;
+}
+
+.modal_close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal_close:hover {
+    color: red;
+}
+
+#modal_input {
+    border: 0px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    color: darkgreen;
+    width: 300px;
+}

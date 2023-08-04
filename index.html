@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тесты с JS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="icon.PNG">
+</head>
+<body>
+    <!-- Контент -->
+    <section class="objects">
+        <h2>Работа с объектами</h2>
+        <div class="inblock">
+            <button class="button" id="obj_b_1">Изменить/добавить значение</button>
+            <button class="button" id="obj_b_2">Удалить значение</button>
+        </div>
+        <div class="outblock">
+            <div class="output" id="obj_workspace"></div>
+        </div>
+    </section>
+
+    <section class="getEls">
+        <h2>Работа с браузерным JS. Получение и создание элементов разметки</h2>
+        <div class="inblock">
+            <button class="button" id="els_b_1">Добавить текст в начало</button>
+            <button class="button" id="els_b_2">Добавить текст в конец</button>
+            <button class="button" id="els_b_3">Добавить текст до</button>
+            <button class="button" id="els_b_4">Добавить текст после</button>
+            <button class="button" id="els_b_5">Очистить</button>
+        </div>
+        <div class="outblock">
+            <div class="workspace_wrap">
+                <div class="output getEls_workspace">
+                    Контейнер (редактируемый)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="input">
+        <h2>Работа с браузерным JS. Изменение атрибутов</h2>
+        <div class="inblock">
+            <label class="input_c_1"><input type="checkbox" id="input_c_1">Переключение атрибута</label>
+        </div>
+        <div class="outblock">
+            <a style="display: block;text-align: center;" class="output" href="main.css" target="_blank">
+                Ссылка на main.css
+            </a>
+        </div>
+    </section>
+
+    <section class="mouseEvents">
+        <h2>Браузерный JS. Обработка событий мыши</h2>
+        <div class="inblock">
+            Компьютерная мышь, <button onclick="today = new Date();mouseEvents_log(`${getTime()}: Лог очищен<br>`, true)" class="button">Очистить лог данных</button><button class="button" onclick="toggleCanME_log()">Включить/отключить лог</button>
+        </div>
+        <div class="outblock">
+            <div class="output">
+                <div class="mousePosition"></div>
+                <div class="mouseEvents_workspace"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="keyEvents">
+        <h2>Браузерный JS. Обработка событий клавиатуры</h2>
+        <div class="inblock">
+            Клавиатура
+        </div>
+        <div class="outblock">
+            <div class="output">
+                <textarea style="resize: none;max-height: 190px;max-width: 90%;" id="key_t_1" cols="30" rows="10">Попробуй скопировать текст</textarea>
+            </div>
+        </div>
+    </section>
+
+    <section class="storage">
+        <h2>Работа с localStorage браузера</h2>
+        <div class="inblock">
+            <button class="button" id="storage_b_1">Добавить значение</button>
+            <button class="button" id="storage_b_2">Удалить значение</button>
+            <button class="button" id="storage_b_3">Очистить всё</button>
+            <button class="button" id="storage_b_4" onclick="updateStorageWorkspace()">Обновить</button>
+        </div>
+        <div class="outblock">
+            <div class="output storage_workspace">
+            </div>
+        </div>
+    </section>
+
+    <section class="space">
+        <h2>Пустое пространство (и переносные стёклышки)</h2>
+        <div style="height: 200px;">
+            <div class="draggable red content"></div>
+            <div class="draggable green content"></div>
+            <div class="draggable blue content"></div>
+        </div>
+    </section>
+
+    <span style="cursor: default;">&Delta; - 916</span>
+    
+    <!-- Важные детали -->
+
+    <div class="upscroll" title="Наверх">
+        ▲
+    </div>
+    
+    <div class="modal_background" style="display: none;">
+        <div class="modal_content">
+            <span class="modal_close" onclick="offModal();">&times;</span>
+            <p class="modal_text"></p>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="app.js"></script>
+    <script type="module">
+        updateObjWorkspace();
+        updateStorageWorkspace();
+        updateDraggables();
+    </script>
+</body>
+</html>
