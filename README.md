@@ -2,4 +2,4 @@
 Запускать с помощью браузера Chrome, Firefox, Internet Explorer, др.
 Запускать двойным щелчком в файловом менеджере файл index.html для просмотра сайта.
 Открывать другие файлы и редактиовать их, не разбираясь, не рекомендую.<br>
-Сайт доступен онлайн! <a href="https://andreybochkov.github.io/JS-Example/">Ссылка на сайт</a>
+Сайт доступен онлайн! <a href="https://andreybochkov.github.io/JS_Example/">Ссылка на сайт</a>
